@@ -1,17 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: myapp-argo-helm-prod
   namespace: argocd
 spec:
-  project: default
+  project: ota-delivery
   source:
     repoURL: 'https://github.com/bartpaczkows/argocd-poc.git'
     targetRevision: HEAD
-    path: dev/helm_app
+    path: helm_app
+    helm:
+      valueFiles:
+      - values_prod.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: ota-try
+    namespace: ota-prod
   syncPolicy:
     automated:
       prune: true
