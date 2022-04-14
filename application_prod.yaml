@@ -4,7 +4,7 @@ metadata:
   name: myapp-argo-helm-prod
   namespace: argocd
 spec:
-  project: ota-delivery
+  project: default
   source:
     repoURL: 'https://github.com/bartpaczkows/argocd-poc.git'
     targetRevision: HEAD
