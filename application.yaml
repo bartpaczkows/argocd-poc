@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: 'https://github.com/bartpaczkows/argocd-poc.git'
     targetRevision: HEAD
-    path: dev
+    path: dev/helm_app
   destination:
     server: https://kubernetes.default.svc
-    namespace: ota
+    namespace: ota-try
   syncPolicy:
     automated:
       prune: true
