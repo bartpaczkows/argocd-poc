@@ -1,15 +1,20 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: ota-kustomize-stage
-resources:
-- ../../base/helmapp
+# resources:
+# - ../../base/helmapp
 
+
+helmGlobals:
+  chartHome:  ../../base/helmapp
+
+helmCharts:
+- name: helmapp
+  version: 0.1.0
+  valuesFile: values-stage.yaml
+  releaseName: helmapp
+  namespace: ota-kustomize-stage
 
 
 patchesStrategicMerge:
 - map.yaml
-
-
-helmCharts:
-  valuesFile: values-stage.yaml
-
