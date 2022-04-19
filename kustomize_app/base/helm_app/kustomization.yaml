@@ -22,6 +22,6 @@ helmGlobals:
 helmCharts:
 - name: helm_app
   version: 0.1.0
-  valuesFile: helm_app/values.yaml
+  # valuesFile: helm_app/values.yaml
   releaseName: helm_app
   namespace: ota-kustomize
