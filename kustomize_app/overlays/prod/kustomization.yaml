@@ -7,8 +7,8 @@ resources:
 
 configMapGenerator:
 - name: generated-configmap
-  files:
-  - application.properties
+  envs:
+  - .env
 
 helmGlobals:
   chartHome:  ../../base
