@@ -1,0 +1,24 @@
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
+# namespace: ota-stage
+# resources:
+# - templates/service.yaml
+# - templates/config_map.yaml
+# - templates/deployment.yaml
+# - values.yaml
+
+
+# HELM_CONFIG_HOME=/home/bpaczkowski/.config/helm
+# HELM_CACHE_HOME=/home/bpaczkowski/.cache/helm
+# HELM_DATA_HOME=/home/bpaczkowski/.local/share/helm
+
+# helmGlobals:
+#   configHome: /home/bpaczkowski/.config/helm
+  # cacheHome: /home/bpaczkowski/.cache/helm
+  # dataHome: /home/bpaczkowski/.local/share/helm
+
+helmCharts:
+- name: helm_app
+  valuesFile: values.yaml
+  releaseName: helm_app
+  namespace: ota-dev
