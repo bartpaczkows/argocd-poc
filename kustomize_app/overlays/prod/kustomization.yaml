@@ -5,6 +5,10 @@ namespace: ota-kustomize-stage
 resources:
 - ./mySecret.yaml
 
+configMapGenerator:
+- name: generated-configmap
+  files:
+  - application.properties
 
 helmGlobals:
   chartHome:  ../../base
