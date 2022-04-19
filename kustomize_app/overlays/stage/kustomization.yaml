@@ -5,5 +5,11 @@ resources:
 - ../../base/helmapp
 
 
+
 patchesStrategicMerge:
 - map.yaml
+
+
+helmCharts:
+  valuesFile: values-stage.yaml
+
