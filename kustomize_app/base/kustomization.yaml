@@ -17,10 +17,11 @@ kind: Kustomization
   # dataHome: /home/bpaczkowski/.local/share/helm
 
 helmGlobals:
-  chartHome: helm_app
+  chartHome: .
 
 helmCharts:
 - name: helm_app
+  version: 0.1.0
   valuesFile: values.yaml
   releaseName: helm_app
-  namespace: ota-dev
+  namespace: ota-kustomize
