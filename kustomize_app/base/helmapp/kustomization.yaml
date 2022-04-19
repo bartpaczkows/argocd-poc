@@ -7,14 +7,6 @@ kind: Kustomization
 # - templates/deployment.yaml
 
 
-# HELM_CONFIG_HOME=/home/bpaczkowski/.config/helm
-# HELM_CACHE_HOME=/home/bpaczkowski/.cache/helm
-# HELM_DATA_HOME=/home/bpaczkowski/.local/share/helm
-
-# helmGlobals:
-#   configHome: /home/bpaczkowski/.config/helm
-  # cacheHome: /home/bpaczkowski/.cache/helm
-  # dataHome: /home/bpaczkowski/.local/share/helm
 
 helmGlobals:
   chartHome: ../
