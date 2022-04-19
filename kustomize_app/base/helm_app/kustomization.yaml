@@ -17,7 +17,7 @@ kind: Kustomization
   # dataHome: /home/bpaczkowski/.local/share/helm
 
 helmGlobals:
-  chartHome: .
+  chartHome: ../
 
 helmCharts:
 - name: helm_app
