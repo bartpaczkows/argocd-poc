@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: ota-kustomize-stage
+# namespace: ota-kustomize-stage
 
 resources:
 - ./mySecret.yaml
@@ -13,7 +13,7 @@ helmCharts:
 - name: helmapp
   valuesFile: values-prod.yaml
   releaseName: helmapp
-  namespace: ota-kustomize-prod
+  # namespace: ota-kustomize-prod
 
 
 patchesStrategicMerge:
