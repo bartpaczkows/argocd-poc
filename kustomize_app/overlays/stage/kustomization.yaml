@@ -10,7 +10,6 @@ helmGlobals:
 
 helmCharts:
 - name: helmapp
-  version: 0.1.0
   valuesFile: values-stage.yaml
   releaseName: helmapp
   namespace: ota-kustomize-stage
